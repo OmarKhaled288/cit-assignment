@@ -74,6 +74,7 @@ Driven by the EDA findings, cleaning proceeds in steps, re-inspecting after each
 3. **Remove non-product line items** — `StockCode`s that are not the usual 5-digit product codes (postage `POST`, samples, the discount code `D`, manual adjustments, etc.). These are not products a customer "buys" in a segmentation sense.
 4. **Remove returns and their matching original sale** — invoices starting with `C` are cancellations. We negate their quantity and use an **anti-join** on `(CustomerID, StockCode, Quantity, UnitPrice)` to remove both the return *and* the original purchase it reverses, so a bought-then-returned item nets to zero rather than inflating apparent spend.
 5. **Add `total_amount = Quantity × UnitPrice`** — line-level revenue, the basis for the monetary features.
+6. **Remove duplicate rows** — remove any rows that appear more than once in the dataset after all the cleaning steps.
 
 ![Data cleaning results](<graphs/Data cleaning results.png>)
 
