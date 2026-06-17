@@ -77,7 +77,7 @@ Driven by the EDA findings, cleaning proceeds in steps, re-inspecting after each
 
 ![Data cleaning results](<graphs/Data cleaning results.png>)
 
-The waterfall of row counts: **541,909 raw → 349,782 retained** (~192k rows / ~35% dropped). The bulk of the loss is the missing-customer rows; the rest is non-UK, non-product and return-related. What remains is a clean ledger of genuine UK product purchases tied to identifiable customers.
+The waterfall of row counts: **541,909 raw → 344,751 retained** (~197k rows / ~36% dropped). The bulk of the loss is the missing-customer rows; the rest is non-UK, non-product and return-related. What remains is a clean ledger of genuine UK product purchases tied to identifiable customers.
 
 ### 4.1 Post-cleaning sanity checks
 
