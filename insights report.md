@@ -193,6 +193,23 @@ The boxplots show clear separation on **frequency, monetary value, breadth, rece
 
 To visualise the 6-dimensional clustering, **PCA** projects the scaled features onto their two highest-variance directions. The two principal components together retain **79.1% of the total variance** (PC1 60.9%, PC2 18.2%), so this 2-D picture is a faithful summary. The two clusters occupy **distinct regions along PC1** with only a modest overlap zone in the middle — consistent with the moderate (not extreme) silhouette of 0.357. PC1 effectively acts as an "engagement axis," separating the loyal cohort from the one-off cohort.
 
+### 9.1 Revenue concentration — "few whales, many minnows" quantified
+
+Rather than merely assert that a small loyal core drives most of the business, we measure it. Splitting total revenue by segment:
+
+| Segment | Customers | Share of customers | Share of revenue |
+|---|---|---|---|
+| **Loyal / high-value** | 1,793 | 45.9% | **88.0%** |
+| **One-off / lapsed** | 2,115 | 54.1% | 12.0% |
+
+The loyal segment is under half the customer base yet generates **~88% of all revenue** (≈£5.99M of ≈£6.81M total). A customer-level **Lorenz curve** (cumulative revenue against cumulative customers, ranked by spend) sharpens the picture:
+
+- Top **10%** of customers → **57.7%** of revenue
+- Top **20%** of customers → **72.0%** of revenue
+- Top **50%** of customers → **91.3%** of revenue
+
+This is a textbook **Pareto concentration**: revenue rides overwhelmingly on a small, high-value core. It raises the stakes on **retention** — losing a handful of loyal customers costs far more than losing many casual ones — and confirms that the engagement-based split is also the revenue-relevant one.
+
 ---
 
 ## 10. Insights gained
@@ -200,7 +217,7 @@ To visualise the 6-dimensional clustering, **PCA** projects the scaled features 
 1. **The business is overwhelmingly a UK operation (~89%).** Geographic scoping is justified and any segmentation strategy should be UK-first.
 2. **Customers fall cleanly into two behavioural types.** Statistically the data supports two groups, unanimously, across four diagnostics — a loyal/high-value core and a much larger one-off/lapsed tail.
 3. **Engagement, not basket size, is the dividing line.** The clusters differ most on frequency, recency and tenure and least on average order value. Retention levers (repeat purchasing) matter more than upselling a single basket.
-4. **The customer base is "few whales, many minnows."** Every monetary feature is heavily right-skewed; a small loyal segment plausibly drives a large share of revenue (a classic Pareto pattern worth quantifying).
+4. **The customer base is "few whales, many minnows" — now quantified (§9.1).** Revenue is heavily concentrated: the loyal segment (45.9% of customers) generates **88.0% of revenue**, and the top 20% of customers alone account for ~72%. This Pareto concentration makes **retention** the dominant lever — the business's revenue rides on a small, high-value core.
 5. **Strong Q4 seasonality.** Revenue and order volume ramp sharply into the pre-Christmas period — relevant for campaign timing.
 6. **Clear action mapping:** *retain & reward* the loyal segment (loyalty perks, early access); *reactivate* the one-off/lapsed segment (win-back offers, re-engagement email) given its cold recency and short tenure.
 
