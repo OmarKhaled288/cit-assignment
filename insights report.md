@@ -1,6 +1,5 @@
 # Customer Segmentation of an Online Retailer — Technical Report
 
-**Dataset:** UCI *Online Retail* — ~541,909 transaction line items from a UK-based online gift retailer, covering **2010-12-01 to 2011-12-09** (~373 days).
 **Objective:** Use unsupervised learning (K-Means) to group customers into actionable segments, so the business can treat loyal high-value customers differently from one-off / lapsed buyers.
 **Tooling:** `polars` (data wrangling), `scikit-learn` (scaling, K-Means, validation metrics, PCA), `matplotlib` / `seaborn` / `plotly` (visualisation).
 
